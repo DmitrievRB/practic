@@ -15,7 +15,7 @@ class APIException: # Класс для обработки исключений 
         try:
             quote_ticker = keys[quote]
         except KeyError:
-            raise ConvertionExpeption(f"Такой валюты как {quote} нет \n Увидеть список всех доступных валют : /values ")
+            raise ConvertionExpeption(f"Такой валюты как {base} нет \n Увидеть список всех доступных валют : /values ")
         try:
             base_ticker = keys[base]
         except KeyError:
@@ -27,3 +27,4 @@ class APIException: # Класс для обработки исключений 
         #  Строка для отправки запроса к API сайта с валютами
         r = requests.get(f"https://min-api.cryptocompare.com/data/price?fsym={quote_ticker}&tsyms={base_ticker}")
         total_base = float(json.loads(r.content)[keys[base]]) # Парсинг ответов json
+        return total_base
