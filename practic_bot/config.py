@@ -1,6 +1,6 @@
-TOKEN = "5923574225:AAGOHP3NqgWMJuZIXP2HQ9Cli4Nt3epzv4Y"
+TOKEN = "5923574225:AAGOHP3NqgWMJuZIXP2HQ9Cli4Nt3epzv4Y"# токен полученный при регистрации бота
 keys = {
     "биткоин": "BTC",
     "эфириум": "ETH",
     "доллар": "USD"
-}
+} # Словарь валют с которыми будет работать конвертор
