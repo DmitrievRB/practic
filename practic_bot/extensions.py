@@ -19,7 +19,7 @@ class APIException: # Класс для обработки исключений 
         try:
             base_ticker = keys[base]
         except KeyError:
-            raise ConvertionExpeption(f"Такой валюты как {quote} нет \n Увидеть список всех доступных валют : /values ")
+            raise ConvertionExpeption(f"Такой валюты как {base} нет \n Увидеть список всех доступных валют : /values ")
         try:
             amount = float(amount)
         except ValueError:
